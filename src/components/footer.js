@@ -23,7 +23,7 @@ export default class Footer extends Component {
             },
             {
                 "name":"instagram",
-                "url":"https://instagram.com/philipoth",
+                "url":"https://instagram.com/stylipth",
                 "className":"instagram",
                 "imgsrc":instagramIcon
             }
@@ -37,10 +37,10 @@ export default class Footer extends Component {
         ];
         return <React.Fragment>
             <div id="container">
-                <div className="d-flex flex-row justify-content-center pt-4">
+                <div className="d-flex flex-row justify-content-center pt-4 pb-4">
                         {socialItems.map((item, index) =>{
                             return(
-                                <div className="pl-3 pr-3" key={index} >
+                                <div className="col-md-1" key={index} >
                                     <a href={item.url}>
                                         <i className={item.className} />
                                         <img src={item.imgsrc} alt="" width="50px"/>
