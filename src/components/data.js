@@ -41,7 +41,7 @@ let mainImages = [
         },
         {
             index: 9,
-            url: "https://res.cloudinary.com/philipscloud/image/upload/v1627222522/Analog/Originals/R1-03663-0031_01_woojsd.jpg",
+            url: "https://res.cloudinary.com/philipscloud/image/upload/v1627237417/Analog/Originals/R1-03663-0031_02_emaahi.jpg",
             alt: "Man with his skateboard waiting for tram"
         },
         {
