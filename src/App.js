@@ -4,9 +4,9 @@ import './App.css';
 import "./stylesheets/lightbox.css";
 
 //Components
-import Header from "./components/header";
-import Body from "./components/body";
-import Footer from "./components/footer";
+import Header from "./components/Header";
+import Body from "./components/MainGallery";
+import Footer from "./components/Footer";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 

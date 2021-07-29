@@ -1,28 +1,64 @@
-// import React from 'react';
-// import { makeStyles } from '@material-ui/core/styles';
-// import Modal from '@material-ui/core/Modal';
+import React, { Component } from 'react';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
+import Modal from '@material-ui/core/Modal';
+import {Image, CloudinaryContext } from "cloudinary-react";
+import {mainImages} from './data.js';
 
-// export default function LightBox() {
 
-//     const [modalStyle] = React.useState(getModalStyle);
-//     const [open, setOpen] = React.useState(false);
+function getModalStyle() {
+    const top = 50;
+    const left = 50 ;
+    return {
+        top: `${top}%`,
+        left: `${left}%`,
+        transform: `translate(-${top}%, -${left}%)`,
+    };
+}
 
-//     const handleOpen = () => {
-//         setOpen(true);
-//     };
+const useStyles = theme => ({
+	modal: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    }, 
+});
 
-//     const handleClose = () => {
-//         setOpen(false);
-//     }
 
-//     const body = (
-//         <p>Hello World!</p>
-//     )
+class LightBox extends Component {
+  
+    state = {
+		open: false,
+	};
+	
+	handleOpen = (index) => {
+		console.log("Open: " + index);
+		this.setState({ open: true });
+	}
 
-//     return (
-//         <div> 
-//             <button t
-//         </div>
-//     )
-// }
+	handleClose = () => {
+		console.log("Close")
+		this.setState({ open: false });
+	}
 
+
+ 
+
+    render() {
+        const { classes } = this.props;
+
+        return (
+            <Modal
+                className={classes.modal}
+                open={this.state.open}
+                onClose={this.handleClose}
+            >
+                <div className={classes.paper}>
+                    <Image publicId={mainImages[0].url} alt={mainImages[0].alt} className={classes.image}/>	
+                </div>
+            </Modal>
+
+        )
+    }
+}
+
+export default withStyles(useStyles)(LightBox);
