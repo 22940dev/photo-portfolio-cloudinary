@@ -42,6 +42,15 @@ function getModalStyle() {
 const useStyles = theme => ({
 	root: {
 		padding: '0 30px',
+		[theme.breakpoints.down('md')]: {
+			padding: '0 0px',
+		}
+	},
+
+	breakpoints: {
+		values: {
+			desktop: 1280,
+		}
 	},
 	
 	gutter: {
@@ -66,11 +75,19 @@ const useStyles = theme => ({
 		opacity: "100%",
         boxShadow: theme.shadows[5],
         padding: theme.spacing(2, 4, 3),
-		width: 1500,
+		width: "65%",
+		[theme.breakpoints.down('sm')]: {
+			width: "100%",
+		},
+		[theme.breakpoints.down('xs')]: {
+			width: "100%",
+		}
     },
 	image_row: {
 		[theme.breakpoints.down('md')]: {
 			marginBottom: -20,
+			marginRight: 0,
+			marginLeft: 0,
 		}
 	},
 	
@@ -80,11 +97,24 @@ const useStyles = theme => ({
 	},
 
 	thumbnail : {
-		width: 360,
+		[theme.breakpoints.down('xl')]: {
+			width: 500,
+			marginBottom: 0,
+			marginLeft: 0,
+		},
+		[theme.breakpoints.down('desktop')]: {
+			width: 400,
+			marginBottom: 20,
+			marginLeft: 20,
+		},
 		[theme.breakpoints.down('md')]: { //md is 960px
 			marginBottom: 20,
 			marginLeft: 0,
 		},
+		[theme.breakpoints.down('sm')]: {
+			width: 360,
+		},
+	
 	}
   });
 
@@ -116,8 +146,6 @@ class Body extends Component {
 		this.setState({index: i})
 	}
 
-
- 
 	render() {
         const { classes } = this.props;
 	
@@ -139,11 +167,9 @@ class Body extends Component {
 							  	<Image publicId={mainImages[2].url} alt={mainImages[2].alt} className={classes.thumbnail}/>
 							</Grid>
                         </Grid>  
-					
 
                         <Grid item container justifyContent="center" className={classes.image_row}>
-
-						<Grid className={classes.gutter} onClick={() => this.handleOpen(3)}>
+							<Grid className={classes.gutter} onClick={() => this.handleOpen(3)}>
                           		<Image publicId={mainImages[3].url} alt={mainImages[3].alt} className={classes.thumbnail}/>
 							</Grid>
 
@@ -154,11 +180,10 @@ class Body extends Component {
 							<Grid className={classes.gutter} onClick={() => this.handleOpen(5)}>
 							  	<Image publicId={mainImages[5].url} alt={mainImages[5].alt} className={classes.thumbnail}/>
 							</Grid> 
-
                         </Grid>  
-						<Grid item container justifyContent="center" className={classes.image_row}>
 
-						<Grid className={classes.gutter} onClick={() => this.handleOpen(6)}>
+						<Grid item container justifyContent="center" className={classes.image_row}>
+							<Grid className={classes.gutter} onClick={() => this.handleOpen(6)}>
                           		<Image publicId={mainImages[6].url} alt={mainImages[6].alt} className={classes.thumbnail}/>
 							</Grid>
 
@@ -169,12 +194,11 @@ class Body extends Component {
 							<Grid className={classes.gutter} onClick={() => this.handleOpen(8)}>
 							  	<Image publicId={mainImages[8].url} alt={mainImages[8].alt} className={classes.thumbnail}/>
 							</Grid> 
-
                         </Grid>  
-						<Grid item container justifyContent="center" className={classes.image_row}>
 
-						<Grid className={classes.gutter} onClick={() => this.handleOpen(9)}>
-                          		<Image publicId={mainImages[9].url} alt={mainImages[9].alt} className={classes.thumbnail}/>
+						<Grid item container justifyContent="center" className={classes.image_row}>
+							<Grid className={classes.gutter} onClick={() => this.handleOpen(9)}>
+								<Image publicId={mainImages[9].url} alt={mainImages[9].alt} className={classes.thumbnail}/>
 							</Grid>
 
 							<Grid className={classes.gutter} onClick={() => this.handleOpen(10)}>
@@ -188,11 +212,33 @@ class Body extends Component {
 
 						<Grid item container justifyContent="center" className={classes.image_row}>
 
-						<Grid className={classes.gutter} onClick={() => this.handleOpen(12)}>
+							<Grid className={classes.gutter} onClick={() => this.handleOpen(12)}>
                           		<Image publicId={mainImages[12].url} alt={mainImages[12].alt} className={classes.thumbnail}/>
 							</Grid>
-					
-                        </Grid>  
+
+							<Grid className={classes.gutter} onClick={() => this.handleOpen(13)}>
+                          		<Image publicId={mainImages[13].url} alt={mainImages[13].alt} className={classes.thumbnail}/>
+							</Grid>
+
+							<Grid className={classes.gutter} onClick={() => this.handleOpen(14)}>
+                          		<Image publicId={mainImages[14].url} alt={mainImages[14].alt} className={classes.thumbnail}/>
+							</Grid>
+
+                        </Grid>
+
+						<Grid item container justifyContent="center" className={classes.image_row}>
+
+							<Grid className={classes.gutter} onClick={() => this.handleOpen(15)}>
+                          		<Image publicId={mainImages[15].url} alt={mainImages[15].alt} className={classes.thumbnail}/>
+							</Grid>
+
+							<Grid className={classes.gutter} onClick={() => this.handleOpen(16)}>
+                          		<Image publicId={mainImages[16].url} alt={mainImages[16].alt} className={classes.thumbnail}/>
+							</Grid>
+
+						
+
+                        </Grid>    
 
                     </Grid>
 
