@@ -151,7 +151,7 @@ class Body extends Component {
 	
         return (    
             <React.Fragment>
-                <CloudinaryContext cloudName="philipscloud">
+                <CloudinaryContext cloudName="ddb4kkgtw">
                     <Grid container direction={"row"} justifyContent="center" className={classes.root} spacing={2}>
                        
 						{mainImages.map((image, index) => { 
