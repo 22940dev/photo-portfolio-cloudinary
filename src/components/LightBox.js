@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import { withStyles, makeStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
-import {Image, CloudinaryContext } from "cloudinary-react";
+import {Image} from "cloudinary-react";
 import {mainImages} from './data.js';
 
 
-function getModalStyle() {
-    const top = 50;
-    const left = 50 ;
-    return {
-        top: `${top}%`,
-        left: `${left}%`,
-        transform: `translate(-${top}%, -${left}%)`,
-    };
-}
+// function getModalStyle() {
+//    const top = 50;
+//    const left = 50 ;
+//    return {
+//        top: `${top}%`,
+//        left: `${left}%`,
+//        transform: `translate(-${top}%, -${left}%)`,
+//    };
+//}
 
 const useStyles = theme => ({
 	modal: {
