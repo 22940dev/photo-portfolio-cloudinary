@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 
 import instagramIcon from "../assets/instagram.png";
 import linkedinIcon from "../assets/linkedin.png";
