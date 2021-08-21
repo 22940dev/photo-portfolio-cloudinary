@@ -18,7 +18,7 @@ import 'lightgallery/css/lg-thumbnail.css';
 
 // import lgThumbnail from 'lightgallery/plugins/thumbnail';
 
-import LazyLoad from 'react-lazy-load';
+// import LazyLoad from 'react-lazy-load';
 
 
 import {mainImages} from './data.js';
