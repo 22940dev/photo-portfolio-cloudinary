@@ -4,10 +4,10 @@ import {Image, CloudinaryContext } from "cloudinary-react";
 // import lightGallery from "lightgallery";
 
 //Material-ui 
-import { makeStyles, withStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 import Modal from '@material-ui/core/Modal';
 import Grid from '@material-ui/core/Grid';
-import {Paper} from '@material-ui/core/Paper';
+// import {Paper} from '@material-ui/core/Paper';
 import PropTypes from 'prop-types';
 
 
@@ -24,22 +24,22 @@ import LazyLoad from 'react-lazy-load';
 import {mainImages} from './data.js';
 
 
-import { ThemeConsumer } from "react-bootstrap/esm/ThemeProvider";
+// import { ThemeConsumer } from "react-bootstrap/esm/ThemeProvider";
 
 
-import LightBox from "./LightBox.js";
+// import LightBox from "./LightBox.js";
 
 
 
-function getModalStyle() {
-    const top = 50;
-    const left = 50 ;
-    return {
-        top: `${top}%`,
-        left: `${left}%`,
-        transform: `translate(-${top}%, -${left}%)`,
-    };
-}
+// function getModalStyle() {
+//     const top = 50;
+//     const left = 50 ;
+//     return {
+//         top: `${top}%`,
+//         left: `${left}%`,
+//         transform: `translate(-${top}%, -${left}%)`,
+//     };
+// }
 
 const useStyles = theme => ({
 	root: {
